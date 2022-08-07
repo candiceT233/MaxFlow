@@ -6,6 +6,7 @@ import Cython.Compiler.Options
 
 Cython.Compiler.Options.annotate = True
 cwd = os.getcwd()
+#cwd='/qfs/people/tang584/.local/lib/python3.7/site-packages'
 
 cython_module = cythonize(Extension(
                            "maxflow._maxflow",                                

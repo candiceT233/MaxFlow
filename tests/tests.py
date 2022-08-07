@@ -258,5 +258,7 @@ def run_Solver(only_correctness=False):
     bench_Solvers(2000,10, density=0.9, dense=True, matrix_generator=gen_matrix1)
 
 
-run(True)
-run_Solver(True)
+# run(True)
+# run_Solver(True)
+
+run()
