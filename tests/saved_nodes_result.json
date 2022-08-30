@@ -1,0 +1,72 @@
+{
+  "100": {
+    "Edges": 4950,
+    "Ave_graph_gen_time": 0.0006771213971660473,
+    "Ave_load_time": {
+      "parallel_AhujaOrlin_segment": 8.18878019344993e-05,
+      "parallel_push_relabel": 8.806940022623166e-05,
+      "parallel_push_relabel_segment": 7.27909995475784e-05
+    },
+    "Ave_solve_time": {
+      "parallel_AhujaOrlin_segment": 0.01448332999862032,
+      "parallel_push_relabel": 0.0001895807989058085,
+      "parallel_push_relabel_segment": 0.00017521539994049817
+    }
+  },
+  "500": {
+    "Edges": 124750,
+    "Ave_graph_gen_time": 0.0075761480024084445,
+    "Ave_load_time": {
+      "parallel_AhujaOrlin_segment": 0.0019346017972566188,
+      "parallel_push_relabel": 0.0013917593998485245,
+      "parallel_push_relabel_segment": 0.0014261077987612226
+    },
+    "Ave_solve_time": {
+      "parallel_AhujaOrlin_segment": 0.006618364999303595,
+      "parallel_push_relabel": 0.0013387031998718158,
+      "parallel_push_relabel_segment": 0.002157244201225694
+    }
+  },
+  "1000": {
+    "Edges": 499500,
+    "Ave_graph_gen_time": 0.025844749397947453,
+    "Ave_load_time": {
+      "parallel_AhujaOrlin_segment": 0.011593229400750716,
+      "parallel_push_relabel": 0.012408418598352,
+      "parallel_push_relabel_segment": 0.011902823596028612
+    },
+    "Ave_solve_time": {
+      "parallel_AhujaOrlin_segment": 0.007794397999532521,
+      "parallel_push_relabel": 0.002703733800444752,
+      "parallel_push_relabel_segment": 0.008198752401222009
+    }
+  },
+  "5000": {
+    "Edges": 12497500,
+    "Ave_graph_gen_time": 0.7036770895996597,
+    "Ave_load_time": {
+      "parallel_AhujaOrlin_segment": 0.49784104299760656,
+      "parallel_push_relabel": 0.4857861285971012,
+      "parallel_push_relabel_segment": 0.48132659559923924
+    },
+    "Ave_solve_time": {
+      "parallel_AhujaOrlin_segment": 0.09937165020091925,
+      "parallel_push_relabel": 0.05308172380173346,
+      "parallel_push_relabel_segment": 0.11500407780113164
+    }
+  },
+  "10000": {
+    "Edges": 49995000,
+    "Ave_graph_gen_time": 2.817629314199439,
+    "Ave_load_time": {
+      "parallel_AhujaOrlin_segment": 2.0277284793992294,
+      "parallel_push_relabel": 1.9649995373998537,
+      "parallel_push_relabel_segment": 2.007318035601929
+    },
+    "Ave_solve_time": {
+      "parallel_AhujaOrlin_segment": 0.36940277780086034,
+      "parallel_push_relabel": 0.21436694219883065,
+      "parallel_push_relabel_segment": 0.3986717507999856
+    }
+  }
+}

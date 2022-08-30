@@ -58,8 +58,8 @@ def test_correctness(n, iters, seed=0, density=0.5, dense=True):
     np.random.seed(seed)
 
     for i in range(iters):
-        # x = np.random.randint(0, 2**32, size=(n,n), dtype=np.int32)
-        x = (sparse.rand(n,n,density=density,format='csr')*200).astype(np.uint32)
+        x = np.random.randint(0, 2**32, size=(n,n), dtype=np.int32)
+        # x = (sparse.rand(n,n,density=density,format='csr')*200).astype(np.uint32)
         if dense:
             x_ = x.toarray()
         else:
