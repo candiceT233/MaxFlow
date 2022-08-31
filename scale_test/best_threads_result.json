@@ -1,0 +1,22 @@
+{
+  "4": {
+    "Edges": 3275520,
+    "Ave_graph_gen_time": 0.7598524149507284,
+    "Load-parallel_AhujaOrlin_segment": 0.27260036021471024,
+    "Load-parallel_push_relabel": 0.25513409823179245,
+    "Load-parallel_push_relabel_segment": 0.2568598985671997,
+    "Solve-parallel_AhujaOrlin_segment": 0.07979292795062065,
+    "Solve-parallel_push_relabel": 0.06524543836712837,
+    "Solve-parallel_push_relabel_segment": 0.12525850161910057
+  },
+  "5": {
+    "Edges": 3275520,
+    "Ave_graph_gen_time": 0.7635105233639479,
+    "Load-parallel_AhujaOrlin_segment": 0.22507992945611477,
+    "Load-parallel_push_relabel": 0.24397853948175907,
+    "Load-parallel_push_relabel_segment": 0.2539749313145876,
+    "Solve-parallel_AhujaOrlin_segment": 0.09823611564934254,
+    "Solve-parallel_push_relabel": 0.07521450333297253,
+    "Solve-parallel_push_relabel_segment": 0.21195183508098125
+  }
+}
