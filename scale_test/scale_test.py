@@ -4,11 +4,12 @@ from scipy import sparse
 import numpy as np
 import time
 import json 
+import pandas as pd
 
 # THREADS = 32
 ALGOS = ['parallel_AhujaOrlin_segment', 'parallel_push_relabel', 'parallel_push_relabel_segment']
-A_SIZE = [ 100, 500, 1000, 5000, 10000, ] # 100, 500, 1000, 5000, 10000
-THREADS = [10] #1, 4, 8, 12, 16, 20, 24, 28, 32
+A_SIZE = [ 10, 100, 1000, 10000 ] # weak scaling, x10
+THREADS = [1,2,4,8,16,32,64,128] # strong scaling, x2
 
 
 def gen_matrix1(n):
@@ -61,26 +62,47 @@ def bench_Solvers(n, iters, seed=0, dense=True, matrix_generator=gen_matrix1, t=
     result= {}
     result['Edges'] = edges
     result['Ave_graph_gen_time'] = scipy_time/iters
-    result['Ave_load_time'] = dict(zip(alg_names, list(avg_maxflow_times[:,0])))
-    result['Ave_solve_time']= dict(zip(alg_names, list(avg_maxflow_times[:,1])))
+    l_alg_names = [f"Load-{x}" for x in alg_names]
+    s_alg_names = [f"Solve-{x}" for x in alg_names]
+
+    result.update(dict(zip(l_alg_names, list(avg_maxflow_times[:,0]))))  
+    result.update(dict(zip(s_alg_names, list(avg_maxflow_times[:,1]))))
     return result
 
+columns = ['Edge','Threads','Load-parallel_AhujaOrlin_segment',
+'Solve-parallel_AhujaOrlin_segmente_',
+'Load-parallel_AhujaOrlin_segment',
+'Solve-parallel_push_relabel',
+'Load-parallel_push_relabel_segment',
+'Solve-parallel_push_relabel_segment',]
 
 def run_tests():
 
-    threads_result = {}
-    for t in THREADS:
-        threads_result[t] = bench_Solvers(10000,3, dense=True, matrix_generator=gen_matrix1, t=t)
-    
-    with open("threads_result.json", "w") as outfile:
-        json.dump(threads_result, outfile, indent=2)
+    # threads_result = {}
+    # for t in THREADS:
+    #     threads_result[t] = bench_Solvers(2560,5, dense=True, matrix_generator=gen_matrix1, t=t)
 
-    # nodes_result = {}
-    # for n in A_SIZE:
-    #     nodes_result[n] = bench_Solvers(n,5, dense=True, matrix_generator=gen_matrix1, t=16)
+    # df = pd.DataFrame.from_dict(threads_result,orient='columns')
+    # df.to_csv('scale_threads_result.csv', index=True)
     
-    # with open("nodes_result.json", "w") as outfile:
-    #     json.dump(nodes_result, outfile, indent=2)
+    fix_size=5000
+    best_threads_result = {}
+    for t in range(1,65):
+        best_threads_result[t] = bench_Solvers(fix_size,5, dense=True, matrix_generator=gen_matrix1, t=t)
+    
+    best_threads_result[128] = bench_Solvers(fix_size,5, dense=True, matrix_generator=gen_matrix1, t=128)
+
+    df = pd.DataFrame.from_dict(best_threads_result,orient='columns')
+    df.to_csv('best_threads_result.csv', index=True)
+
+    # for t in THREADS:
+
+    #     nodes_result = {}
+    #     for n in A_SIZE:
+    #         nodes_result[n] = bench_Solvers(n,5, dense=True, matrix_generator=gen_matrix1, t=t)
+
+    #     df = pd.DataFrame.from_dict(nodes_result,orient='index')
+    #     df.to_csv(f't_{t}_scale_nodes_result.csv', index=True)
     
 
     
