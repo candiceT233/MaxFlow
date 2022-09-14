@@ -97,13 +97,15 @@ def bench_Solvers(n, matrix, seed=0, dense=True, t=10):
     result.update(dict(zip(s_alg_names, list(avg_maxflow_times[:,1]))))
     return result
 
-def apply_opt(arr,edges,speedup=1.4):
+def apply_opt(arr,edges,speedup=1.45):
     t1 = time.perf_counter()
     for val in edges:
-        # improves 40%, no longer improves when reaching maximum
+        # improves 45%, no longer improves when reaching maximum
         if (val * speedup) <= MAX_VAL: 
             # improve only the 1st found edge with 
             arr[(arr == val).nonzero()[0][:1]] = val * speedup
+        else:
+            arr[(arr == val).nonzero()[0][:1]] = MAX_VAL
     t2 = time.perf_counter()
     print(f"apply_opt time (sec): {t2 - t1} ")
     return arr
