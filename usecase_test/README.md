@@ -11,4 +11,4 @@ The example simplified HACC workflow graph:
 3. Sort the edges from lowest to highest (may improve with parallel sort)
 4. Improve the 10% lowest score ( simulate applying optimization )
 5. Re-evaluate graph if maxflow improves
-6. Repeat steps 3-5 until improvement is less than a threshold ( 1%? user defined?)
+6. Repeat steps 3-5 until improvement is less than a threshold ( 5%? user defined?)

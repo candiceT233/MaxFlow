@@ -132,6 +132,7 @@ def improve_slowest(matrix, pc=0.1):
 
 def improvement(prev_flow,curr_flow):
     return ((curr_flow - prev_flow)/prev_flow)
+    
 
 def max_flow(matrix):
     
@@ -151,7 +152,7 @@ if __name__ == "__main__":
     
     t1 = time.perf_counter()
     matrix = create_matrix()
-    print(f"Initial edge values are {sparse.csr_matrix(matrix)}\n")
+    print(f"Initial edge values are \n{sparse.csr_matrix(matrix)}\n")
     result = max_flow(matrix)
     # print(result)
 
@@ -169,7 +170,7 @@ if __name__ == "__main__":
         curr_flow = result['max_flow']
         print(f"New maxflow is {curr_flow}")
         imp = improvement(prev_flow,curr_flow)
-        print(f"Flow improvement is {imp*100}%\n")
+        print(f"Flow improvement is {round(imp*100,2)}%\n")
         iterate +=1
     
     t2 = time.perf_counter()
@@ -179,7 +180,7 @@ if __name__ == "__main__":
     print(f"Iteration count is {iterate}")
     print(f"Final flow is {curr_flow}")
     
-    print(f"Final edge values are {sparse.csr_matrix(matrix)}\n")
+    print(f"Final edge values are \n{sparse.csr_matrix(matrix)}\n")
     # print(sparse.csr_matrix(matrix))
     
 
