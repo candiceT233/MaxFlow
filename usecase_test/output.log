@@ -1,0 +1,105 @@
+Algorithm stops with improvement less than 5.0%
+
+Initial edge values are   (0, 1)	100
+  (0, 2)	100
+  (0, 3)	100
+  (0, 4)	100
+  (1, 5)	50
+  (2, 6)	100
+  (3, 7)	100
+  (4, 8)	50
+  (5, 9)	100
+  (6, 10)	50
+  (7, 11)	100
+  (8, 12)	100
+  (9, 13)	50
+  (10, 14)	100
+  (11, 15)	50
+  (12, 16)	100
+  (13, 17)	100
+  (14, 18)	100
+  (15, 19)	50
+  (16, 20)	100
+  (17, 21)	100
+  (18, 21)	50
+  (19, 21)	100
+  (20, 21)	100
+
+Baseline maxflow is 200
+find_slowest time (sec): 6.198883056640625e-05
+The 10.0% slowest edges are: [50, 50]
+apply_opt time (sec): 5.091726779937744e-05 
+New maxflow is 225
+Flow improvement is 12.5%
+
+find_slowest time (sec): 3.9126724004745483e-05
+The 10.0% slowest edges are: [50, 50]
+apply_opt time (sec): 3.530457615852356e-05 
+New maxflow is 250
+Flow improvement is 11.11111111111111%
+
+find_slowest time (sec): 3.9380043745040894e-05
+The 10.0% slowest edges are: [50, 50]
+apply_opt time (sec): 3.552064299583435e-05 
+New maxflow is 275
+Flow improvement is 10.0%
+
+find_slowest time (sec): 3.766268491744995e-05
+The 10.0% slowest edges are: [50, 75]
+apply_opt time (sec): 3.512948751449585e-05 
+New maxflow is 300
+Flow improvement is 9.090909090909092%
+
+find_slowest time (sec): 3.6660581827163696e-05
+The 10.0% slowest edges are: [75, 75]
+apply_opt time (sec): 3.4596771001815796e-05 
+New maxflow is 325
+Flow improvement is 8.333333333333332%
+
+find_slowest time (sec): 3.642961382865906e-05
+The 10.0% slowest edges are: [75, 75]
+apply_opt time (sec): 3.4656375646591187e-05 
+New maxflow is 350
+Flow improvement is 7.6923076923076925%
+
+find_slowest time (sec): 3.649294376373291e-05
+The 10.0% slowest edges are: [75, 75]
+apply_opt time (sec): 3.4555792808532715e-05 
+New maxflow is 400
+Flow improvement is 14.285714285714285%
+
+find_slowest time (sec): 3.429129719734192e-05
+The 10.0% slowest edges are: [100, 100]
+apply_opt time (sec): 4.2460858821868896e-05 
+New maxflow is 400
+Flow improvement is 0.0%
+
+----------------- Final Output -----------------
+Program total time (sec): 0.02421649545431137
+Iteration count is 8
+Final flow is 400
+Final edge values are   (0, 1)	150
+  (0, 2)	150
+  (0, 3)	100
+  (0, 4)	100
+  (1, 5)	112
+  (2, 6)	100
+  (3, 7)	100
+  (4, 8)	112
+  (5, 9)	100
+  (6, 10)	112
+  (7, 11)	100
+  (8, 12)	100
+  (9, 13)	112
+  (10, 14)	100
+  (11, 15)	112
+  (12, 16)	100
+  (13, 17)	100
+  (14, 18)	100
+  (15, 19)	112
+  (16, 20)	100
+  (17, 21)	100
+  (18, 21)	112
+  (19, 21)	100
+  (20, 21)	100
+
