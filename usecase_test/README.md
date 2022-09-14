@@ -8,7 +8,7 @@ The example simplified HACC workflow graph:
 ### Steps:
 1. Convert bottleneck score into inverse (finding max flow meaning finding the minimum bottleneck edges in the current graph
 2. Find the baseline maxflow number of the graph
-3. Sort the edges from lowest to highest (** can use parallel sort)
+3. Sort the edges from lowest to highest (may improve with parallel sort)
 4. Improve the 10% lowest score ( simulate applying optimization )
 5. Re-evaluate graph if maxflow improves
 6. Repeat steps 3-5 until improvement is less than a threshold ( 1%? user defined?)

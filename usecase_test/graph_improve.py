@@ -15,23 +15,26 @@ columns = ['Edge','Threads','Load-parallel_AhujaOrlin_segment',
 'Solve-parallel_push_relabel',
 'Load-parallel_push_relabel_segment',
 'Solve-parallel_push_relabel_segment',]
+MAX_VAL = 100
+LOW_VAL = 50
 
 def create_matrix():
     m = np.zeros((22, 22)).astype(int)
     # initialize all score as 5 as best performance (low bottleneck)
-    m[0,1:5] = 100
+    m[0,1:5] = MAX_VAL
     for i in range(1,17):
-        m[i,i+4] = 100
-    m[17:21,21] = 100
+        m[i,i+4] = MAX_VAL
+    m[17:21,21] = MAX_VAL
 
     # populate some edges wtih 1 as slow performance (high bottleneck)
-    m[1,5] = 50
-    m[4,8] = 50
-    m[6,10] = 50
-    m[9,13] = 50
-    m[11,15] = 50
-    m[15,19] = 50
-    m[18,21] = 50
+    low_val = MAX_VAL/2
+    m[1,5] = low_val
+    m[4,8] = low_val
+    m[6,10] = low_val
+    m[9,13] = low_val
+    m[11,15] = low_val
+    m[15,19] = low_val
+    m[18,21] = low_val
 
     # print(m)
     return m
@@ -94,11 +97,13 @@ def bench_Solvers(n, matrix, seed=0, dense=True, t=10):
     result.update(dict(zip(s_alg_names, list(avg_maxflow_times[:,1]))))
     return result
 
-def apply_opt(arr,edges,speedup=1.5):
+def apply_opt(arr,edges,speedup=1.4):
     t1 = time.perf_counter()
     for val in edges:
-        # improve only the 1st found edge, improves 50%
-        arr[(arr == val).nonzero()[0][:1]] = val * speedup
+        # improves 40%, no longer improves when reaching maximum
+        if (val * speedup) <= MAX_VAL: 
+            # improve only the 1st found edge with 
+            arr[(arr == val).nonzero()[0][:1]] = val * speedup
     t2 = time.perf_counter()
     print(f"apply_opt time (sec): {t2 - t1} ")
     return arr
