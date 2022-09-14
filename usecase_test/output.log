@@ -1,6 +1,7 @@
 Algorithm stops with improvement less than 5.0%
 
-Initial edge values are   (0, 1)	100
+Initial edge values are 
+  (0, 1)	100
   (0, 2)	100
   (0, 3)	100
   (0, 4)	100
@@ -26,80 +27,81 @@ Initial edge values are   (0, 1)	100
   (20, 21)	100
 
 Baseline maxflow is 200
-find_slowest time (sec): 6.198883056640625e-05
+find_slowest time (sec): 6.05657696723938e-05
 The 10.0% slowest edges are: [50, 50]
-apply_opt time (sec): 5.091726779937744e-05 
-New maxflow is 225
-Flow improvement is 12.5%
+apply_opt time (sec): 7.936358451843262e-05 
+New maxflow is 222
+Flow improvement is 11.0%
 
-find_slowest time (sec): 3.9126724004745483e-05
+find_slowest time (sec): 3.968179225921631e-05
 The 10.0% slowest edges are: [50, 50]
-apply_opt time (sec): 3.530457615852356e-05 
-New maxflow is 250
-Flow improvement is 11.11111111111111%
+apply_opt time (sec): 4.775822162628174e-05 
+New maxflow is 244
+Flow improvement is 9.91%
 
-find_slowest time (sec): 3.9380043745040894e-05
+find_slowest time (sec): 3.909692168235779e-05
 The 10.0% slowest edges are: [50, 50]
-apply_opt time (sec): 3.552064299583435e-05 
-New maxflow is 275
-Flow improvement is 10.0%
+apply_opt time (sec): 4.7888606786727905e-05 
+New maxflow is 266
+Flow improvement is 9.02%
 
-find_slowest time (sec): 3.766268491744995e-05
-The 10.0% slowest edges are: [50, 75]
-apply_opt time (sec): 3.512948751449585e-05 
-New maxflow is 300
-Flow improvement is 9.090909090909092%
+find_slowest time (sec): 3.8273632526397705e-05
+The 10.0% slowest edges are: [50, 72]
+apply_opt time (sec): 4.0125101804733276e-05 
+New maxflow is 288
+Flow improvement is 8.27%
 
-find_slowest time (sec): 3.6660581827163696e-05
-The 10.0% slowest edges are: [75, 75]
-apply_opt time (sec): 3.4596771001815796e-05 
-New maxflow is 325
-Flow improvement is 8.333333333333332%
+find_slowest time (sec): 3.7435442209243774e-05
+The 10.0% slowest edges are: [72, 72]
+apply_opt time (sec): 3.312528133392334e-05 
+New maxflow is 316
+Flow improvement is 9.72%
 
-find_slowest time (sec): 3.642961382865906e-05
-The 10.0% slowest edges are: [75, 75]
-apply_opt time (sec): 3.4656375646591187e-05 
-New maxflow is 350
-Flow improvement is 7.6923076923076925%
+find_slowest time (sec): 3.7472695112228394e-05
+The 10.0% slowest edges are: [72, 72]
+apply_opt time (sec): 3.290921449661255e-05 
+New maxflow is 344
+Flow improvement is 8.86%
 
-find_slowest time (sec): 3.649294376373291e-05
-The 10.0% slowest edges are: [75, 75]
-apply_opt time (sec): 3.4555792808532715e-05 
+find_slowest time (sec): 3.691762685775757e-05
+The 10.0% slowest edges are: [72, 72]
+apply_opt time (sec): 3.265216946601868e-05 
 New maxflow is 400
-Flow improvement is 14.285714285714285%
+Flow improvement is 16.28%
 
-find_slowest time (sec): 3.429129719734192e-05
+find_slowest time (sec): 3.476068377494812e-05
 The 10.0% slowest edges are: [100, 100]
-apply_opt time (sec): 4.2460858821868896e-05 
+apply_opt time (sec): 4.2695552110672e-05 
 New maxflow is 400
 Flow improvement is 0.0%
 
 ----------------- Final Output -----------------
-Program total time (sec): 0.02421649545431137
+Program total time (sec): 0.024658430367708206
 Iteration count is 8
 Final flow is 400
-Final edge values are   (0, 1)	150
-  (0, 2)	150
+Final edge values are 
+  (0, 1)	100
+  (0, 2)	100
   (0, 3)	100
   (0, 4)	100
-  (1, 5)	112
+  (1, 5)	100
   (2, 6)	100
   (3, 7)	100
-  (4, 8)	112
+  (4, 8)	100
   (5, 9)	100
-  (6, 10)	112
+  (6, 10)	100
   (7, 11)	100
   (8, 12)	100
-  (9, 13)	112
+  (9, 13)	100
   (10, 14)	100
-  (11, 15)	112
+  (11, 15)	100
   (12, 16)	100
   (13, 17)	100
   (14, 18)	100
-  (15, 19)	112
+  (15, 19)	100
   (16, 20)	100
   (17, 21)	100
-  (18, 21)	112
+  (18, 21)	100
   (19, 21)	100
   (20, 21)	100
 
