@@ -107,7 +107,7 @@ def apply_opt(arr,edges,speedup=1.45):
         else:
             arr[(arr == val).nonzero()[0][:1]] = MAX_VAL
     t2 = time.perf_counter()
-    print(f"apply_opt time (sec): {t2 - t1} ")
+    print(f"apply_opt time (μs): {round((t2 - t1)*1000000,2)} ")
     return arr
 
 def improve_slowest(matrix, pc=0.1):
@@ -121,10 +121,14 @@ def improve_slowest(matrix, pc=0.1):
     # find nth smallest edges that's not zero
     edges = heapq.nsmallest(num,x[x != 0]) 
     t2 = time.perf_counter()
-    print(f"find_slowest time (sec): {t2 - t1}")
-    print(f"The {pc*100}% slowest edges are: {edges}")
+    print(f"find_slowest time (μs): {round((t2 - t1)*1000000,2)}")
+    
 
-    x = apply_opt(x,edges)
+    # edges[edges < 100]
+    edges = [x for x in edges if x<100]
+    if edges:
+        print(f"The {pc*100}% slowest edges (below 100) are: {edges}")
+        x = apply_opt(x,edges)
 
     # convert back into matrix
     return np.reshape(x, (size, size))
@@ -176,7 +180,7 @@ if __name__ == "__main__":
     t2 = time.perf_counter()
 
     print(f"----------------- Final Output -----------------")
-    print(f"Program total time (sec): {t2 - t1}")
+    print(f"Program total time (μs): {round((t2 - t1)*1000000,2)}")
     print(f"Iteration count is {iterate}")
     print(f"Final flow is {curr_flow}")
     
