@@ -103,8 +103,10 @@ def apply_opt(arr,edges,speedup=1.45):
         # improves 45%, no longer improves when reaching maximum
         if (val * speedup) <= MAX_VAL: 
             # improve only the 1st found edge with 
+            print(f"Optimizing from {val} to {val * speedup} ...")
             arr[(arr == val).nonzero()[0][:1]] = val * speedup
         else:
+            print(f"Optimizing from {val} to {MAX_VAL} ...")
             arr[(arr == val).nonzero()[0][:1]] = MAX_VAL
     t2 = time.perf_counter()
     print(f"apply_opt time (μs): {round((t2 - t1)*1000000,2)} ")

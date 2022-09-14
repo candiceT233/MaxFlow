@@ -27,54 +27,68 @@ Initial edge values are
   (20, 21)	100
 
 Baseline maxflow is 200
-find_slowest time (μs): 58.12
+find_slowest time (μs): 57.64
 The 10.0% slowest edges (below 100) are: [50, 50]
-apply_opt time (μs): 63.49 
+Optimizing from 50 to 72.5 ...
+Optimizing from 50 to 72.5 ...
+apply_opt time (μs): 93.6 
 New maxflow is 222
 Flow improvement is 11.0%
 
-find_slowest time (μs): 40.89
+find_slowest time (μs): 39.98
 The 10.0% slowest edges (below 100) are: [50, 50]
-apply_opt time (μs): 46.69 
+Optimizing from 50 to 72.5 ...
+Optimizing from 50 to 72.5 ...
+apply_opt time (μs): 69.01 
 New maxflow is 244
 Flow improvement is 9.91%
 
-find_slowest time (μs): 39.37
+find_slowest time (μs): 38.61
 The 10.0% slowest edges (below 100) are: [50, 50]
-apply_opt time (μs): 47.01 
+Optimizing from 50 to 72.5 ...
+Optimizing from 50 to 72.5 ...
+apply_opt time (μs): 68.68 
 New maxflow is 266
 Flow improvement is 9.02%
 
-find_slowest time (μs): 38.4
+find_slowest time (μs): 38.02
 The 10.0% slowest edges (below 100) are: [50, 72]
-apply_opt time (μs): 39.7 
+Optimizing from 50 to 72.5 ...
+Optimizing from 72 to 100 ...
+apply_opt time (μs): 54.81 
 New maxflow is 288
 Flow improvement is 8.27%
 
-find_slowest time (μs): 38.04
+find_slowest time (μs): 36.94
 The 10.0% slowest edges (below 100) are: [72, 72]
-apply_opt time (μs): 33.14 
+Optimizing from 72 to 100 ...
+Optimizing from 72 to 100 ...
+apply_opt time (μs): 38.76 
 New maxflow is 316
 Flow improvement is 9.72%
 
-find_slowest time (μs): 37.0
+find_slowest time (μs): 36.75
 The 10.0% slowest edges (below 100) are: [72, 72]
-apply_opt time (μs): 32.47 
+Optimizing from 72 to 100 ...
+Optimizing from 72 to 100 ...
+apply_opt time (μs): 38.73 
 New maxflow is 344
 Flow improvement is 8.86%
 
-find_slowest time (μs): 37.2
+find_slowest time (μs): 36.58
 The 10.0% slowest edges (below 100) are: [72, 72]
-apply_opt time (μs): 32.89 
+Optimizing from 72 to 100 ...
+Optimizing from 72 to 100 ...
+apply_opt time (μs): 38.82 
 New maxflow is 400
 Flow improvement is 16.28%
 
-find_slowest time (μs): 34.85
+find_slowest time (μs): 34.22
 New maxflow is 400
 Flow improvement is 0.0%
 
 ----------------- Final Output -----------------
-Program total time (μs): 24699.18
+Program total time (μs): 24447.84
 Iteration count is 8
 Final flow is 400
 Final edge values are 
