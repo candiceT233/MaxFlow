@@ -1,5 +1,6 @@
-# Example Algorithm Process in Evaluating Bottleneck Score (simplified_HACC):
-The example simplified HACC workflow graph: https://docs.google.com/drawings/d/1cb3N4AH-CPtHd-5Okt7XsRwDJsHuFmwc5zLZHDJA8A4/edit
+# Example Algorithm Process in Evaluating Bottleneck Score
+The example simplified HACC workflow graph:
+![alt text](https://github.com/candiceT233/MaxFlow/tree/main/usecase_test/HACC_Simplified_MaxFlow_Graph.png?raw=true)
 ### Definitions
 - High score as small bottleneck, low score as a large bottleneck
 0 All scores must be greater than 0, must be integer (for the algorithm to work)
